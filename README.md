@@ -14,8 +14,8 @@ Dejo el enlace de la página desplegada en Netlify: [Portfolio-AleixDeumal]().
 - [x] Espero poder leer el título, descripción y datos generales de la imagen junto a ésta.
 - [x] Encontraré un elemento input de tipo fecha que me permite seleccionar una fecha distinta a la de hoy y cambiar la imagen mostrada.
 - [x] El input debe estar limitado para que no pueda elegir una fecha mayor a la de hoy.
-    - [] Si no es el caso y me permite elegir una fecha mayor, debo poder ver un mensaje en pantalla avisándome de que No hay fotografía disponible.
-    - [] La llamada a la API no debe haber ocurrido si me permite elegir una fecha mayor a la de hoy.
+    - [ ] Si no es el caso y me permite elegir una fecha mayor, debo poder ver un mensaje en pantalla avisándome de que No hay fotografía disponible.
+    - [ ] La llamada a la API no debe haber ocurrido si me permite elegir una fecha mayor a la de hoy.
 
 
     
