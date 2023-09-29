@@ -7,7 +7,7 @@ Dejo el enlace de la página desplegada en Netlify: [Portfolio-AleixDeumal]().
 
 ## REACT
 
-###Criterios de aceptacion 
+Criterios de aceptacion 
 
 - [x] Espero ver la página desplegada y de fácil acceso. Así como un repositorio de Github adjunto.
 - [x] Encontraré un elemento img que muestre la imagen destacada por la NASA para hoy según su API con nombre APOD.
