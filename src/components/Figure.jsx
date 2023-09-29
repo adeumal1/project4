@@ -1,4 +1,5 @@
 import React from 'react'
+import './Figure.css'
 
 const Figure = ({ APOD }) => {
   return (
