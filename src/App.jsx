@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import Figure from './components/Figure'
+import axios from 'axios';
 
 function App() {
   const NASA_URL = "https://api.nasa.gov/";
@@ -10,26 +11,27 @@ function App() {
   const [date,setDate] = useState(today);
 
   const [list, setList] = useState([]);
+
   useEffect(()=>{
-    (async ()=>{
-        const data = await fetch(`${NASA_URL}planetary/apod?date=${date}&api_key=${NASA_API_KEY}`
-        ).then(
-        (response) => response.json()
-        );
-        setList(data);
-    })();
+    const getResponse = async () => {
+      try {
+           const response = await axios.get(`${NASA_URL}planetary/apod?date=${date}&api_key=${NASA_API_KEY}`);
+           setList(response.data);
+      } catch(err) {
+           console.log('err')
+      }
+    }
+    getResponse();
   }, [date])
   
   const handleInput = (e) => {
-    console.log(e.target.value);
     setDate(e.target.value.toLocaleString()); 
-    console.log(e.target.value);
   };
   
   return (
     <>
       <h1>Imagen astronómica del día</h1>
-      <input type='date' name='date' value={date} onChange={handleInput}></input>
+      <input type='date' name='date' value={date} max={today} onChange={handleInput}></input>
       <p>Esta imagen corresponde con la fecha {date}</p>
       <Figure APOD={list}/>
     </>
