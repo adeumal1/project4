@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import './App.css'
 
-import Figure from './components/Figure'
+import Figure from './components/Figure/Figure'
 
 
 function App() {
